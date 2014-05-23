@@ -42,16 +42,17 @@
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim RibbonDialogLauncherImpl1 As Microsoft.Office.Tools.Ribbon.RibbonDialogLauncher = Me.Factory.CreateRibbonDialogLauncher
+        Dim Listas As Microsoft.Office.Tools.Ribbon.RibbonGroup
         Me.Tab1 = Me.Factory.CreateRibbonTab
         Me.Group1 = Me.Factory.CreateRibbonGroup
-        Me.Group2 = Me.Factory.CreateRibbonGroup
+        Listas = Me.Factory.CreateRibbonGroup
         Me.Tab1.SuspendLayout()
         '
         'Tab1
         '
         Me.Tab1.ControlId.ControlIdType = Microsoft.Office.Tools.Ribbon.RibbonControlIdType.Office
         Me.Tab1.Groups.Add(Me.Group1)
-        Me.Tab1.Groups.Add(Me.Group2)
+        Me.Tab1.Groups.Add(Listas)
         Me.Tab1.Label = "TabAddIns"
         Me.Tab1.Name = "Tab1"
         '
@@ -61,10 +62,10 @@
         Me.Group1.Label = "Group1"
         Me.Group1.Name = "Group1"
         '
-        'Group2
+        'Listas
         '
-        Me.Group2.Label = "Group2"
-        Me.Group2.Name = "Group2"
+        Listas.Label = "Listas"
+        Listas.Name = "Listas"
         '
         'Ribbon1
         '
@@ -78,7 +79,6 @@
 
     Friend WithEvents Tab1 As Microsoft.Office.Tools.Ribbon.RibbonTab
     Friend WithEvents Group1 As Microsoft.Office.Tools.Ribbon.RibbonGroup
-    Friend WithEvents Group2 As Microsoft.Office.Tools.Ribbon.RibbonGroup
 End Class
 
 Partial Class ThisRibbonCollection
