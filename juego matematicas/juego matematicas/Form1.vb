@@ -5,13 +5,21 @@
     End Sub
 
     Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick
-        Dim i As Integer
+        Dim i, j As Integer
+
+        If LblTiempoAbs.Text = "59" Then
+            Timer1.Enabled = False
+            MaskedTextBox1.Enabled = False
+        End If
         i = CInt(LblTiempo.Text)
         LblTiempo.Text = CStr(i + 1)
+        j = CInt(LblTiempoAbs.Text)
+        LblTiempoAbs.Text = CStr(j + 1)
     End Sub
 
     Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
         Timer1.Enabled = True
+        MaskedTextBox1.Enabled = True
         Dim Random As New Random()
 
         ' generar un random  
@@ -72,8 +80,11 @@
                     MaskedTextBox1.Clear()
                     MaskedTextBox1.Focus()
                     LblPuntos.Text = CStr(resultado / CStr(LblTiempo.Text))
+                    LblSumaPuntos.Text = LblSumaPuntos.Text + CDbl(LblPuntos.Text)
                     LblTiempo.Text = "1"
+                    
                     Call Button5_Click(sender, e)
+
                 End If
             End If
         End If
@@ -81,7 +92,10 @@
 
     End Sub
 
-    Private Sub MaskedTextBox1_MaskInputRejected(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MaskInputRejectedEventArgs) Handles MaskedTextBox1.MaskInputRejected
+    
 
+    Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button6.Click
+        Timer1.Enabled = False
+        LblTiempo.Text = "1"
     End Sub
 End Class

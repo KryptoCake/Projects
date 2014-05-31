@@ -37,6 +37,10 @@ Partial Class Form1
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.LblY = New System.Windows.Forms.Label()
         Me.LblSigno = New System.Windows.Forms.Label()
+        Me.LblSumaPuntos = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.LblTiempoAbs = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'lblX
@@ -186,12 +190,62 @@ Partial Class Form1
         Me.LblSigno.TabIndex = 11
         Me.LblSigno.Text = "+"
         '
+        'LblSumaPuntos
+        '
+        Me.LblSumaPuntos.AutoSize = True
+        Me.LblSumaPuntos.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblSumaPuntos.Location = New System.Drawing.Point(572, 84)
+        Me.LblSumaPuntos.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblSumaPuntos.Name = "LblSumaPuntos"
+        Me.LblSumaPuntos.Size = New System.Drawing.Size(35, 37)
+        Me.LblSumaPuntos.TabIndex = 12
+        Me.LblSumaPuntos.Text = "0"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(753, 35)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(117, 37)
+        Me.Label1.TabIndex = 13
+        Me.Label1.Text = "Puntos"
+        '
+        'Button6
+        '
+        Me.Button6.BackColor = System.Drawing.Color.Cornsilk
+        Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button6.ForeColor = System.Drawing.Color.CornflowerBlue
+        Me.Button6.Location = New System.Drawing.Point(524, 249)
+        Me.Button6.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(255, 46)
+        Me.Button6.TabIndex = 14
+        Me.Button6.Text = "Parar"
+        Me.Button6.UseVisualStyleBackColor = False
+        '
+        'LblTiempoAbs
+        '
+        Me.LblTiempoAbs.AutoSize = True
+        Me.LblTiempoAbs.Font = New System.Drawing.Font("Microsoft Sans Serif", 52.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblTiempoAbs.Location = New System.Drawing.Point(216, 9)
+        Me.LblTiempoAbs.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblTiempoAbs.Name = "LblTiempoAbs"
+        Me.LblTiempoAbs.Size = New System.Drawing.Size(73, 79)
+        Me.LblTiempoAbs.TabIndex = 15
+        Me.LblTiempoAbs.Text = "0"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 11.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(1156, 411)
+        Me.Controls.Add(Me.LblTiempoAbs)
+        Me.Controls.Add(Me.Button6)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.LblSumaPuntos)
         Me.Controls.Add(Me.LblSigno)
         Me.Controls.Add(Me.LblY)
         Me.Controls.Add(Me.Label3)
@@ -225,5 +279,9 @@ Partial Class Form1
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
     Friend WithEvents LblY As System.Windows.Forms.Label
     Friend WithEvents LblSigno As System.Windows.Forms.Label
+    Friend WithEvents LblSumaPuntos As System.Windows.Forms.Label
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Button6 As System.Windows.Forms.Button
+    Friend WithEvents LblTiempoAbs As System.Windows.Forms.Label
 
 End Class
