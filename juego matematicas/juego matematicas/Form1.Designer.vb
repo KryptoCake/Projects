@@ -23,34 +23,37 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
+        Me.lblX = New System.Windows.Forms.Label()
         Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.LblTiempo = New System.Windows.Forms.Label()
-        Me.Puntos = New System.Windows.Forms.Label()
+        Me.LblPuntos = New System.Windows.Forms.Label()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.LblY = New System.Windows.Forms.Label()
+        Me.LblSigno = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
-        'Label1
+        'lblX
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Berlin Sans FB", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(260, 129)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(239, 71)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "00 ? 00"
+        Me.lblX.AutoSize = True
+        Me.lblX.Font = New System.Drawing.Font("Berlin Sans FB", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblX.Location = New System.Drawing.Point(232, 128)
+        Me.lblX.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblX.Name = "lblX"
+        Me.lblX.Size = New System.Drawing.Size(106, 71)
+        Me.lblX.TabIndex = 0
+        Me.lblX.Text = "00"
         '
         'MaskedTextBox1
         '
         Me.MaskedTextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 32.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MaskedTextBox1.Location = New System.Drawing.Point(507, 143)
+        Me.MaskedTextBox1.Location = New System.Drawing.Point(541, 144)
         Me.MaskedTextBox1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.MaskedTextBox1.Mask = "99999"
         Me.MaskedTextBox1.Name = "MaskedTextBox1"
@@ -76,7 +79,7 @@ Partial Class Form1
         Me.Button2.BackColor = System.Drawing.Color.Cornsilk
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 32.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.Button2.Location = New System.Drawing.Point(88, 168)
+        Me.Button2.Location = New System.Drawing.Point(88, 96)
         Me.Button2.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(82, 60)
@@ -89,7 +92,7 @@ Partial Class Form1
         Me.Button3.BackColor = System.Drawing.Color.Cornsilk
         Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 32.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.Button3.Location = New System.Drawing.Point(88, 101)
+        Me.Button3.Location = New System.Drawing.Point(88, 165)
         Me.Button3.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(82, 61)
@@ -114,23 +117,23 @@ Partial Class Form1
         '
         Me.LblTiempo.AutoSize = True
         Me.LblTiempo.Font = New System.Drawing.Font("Microsoft Sans Serif", 52.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblTiempo.Location = New System.Drawing.Point(247, 16)
+        Me.LblTiempo.Location = New System.Drawing.Point(355, 9)
         Me.LblTiempo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblTiempo.Name = "LblTiempo"
         Me.LblTiempo.Size = New System.Drawing.Size(73, 79)
         Me.LblTiempo.TabIndex = 6
         Me.LblTiempo.Text = "0"
         '
-        'Puntos
+        'LblPuntos
         '
-        Me.Puntos.AutoSize = True
-        Me.Puntos.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Puntos.Location = New System.Drawing.Point(572, 35)
-        Me.Puntos.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Puntos.Name = "Puntos"
-        Me.Puntos.Size = New System.Drawing.Size(117, 37)
-        Me.Puntos.TabIndex = 7
-        Me.Puntos.Text = "Puntos"
+        Me.LblPuntos.AutoSize = True
+        Me.LblPuntos.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblPuntos.Location = New System.Drawing.Point(572, 35)
+        Me.LblPuntos.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblPuntos.Name = "LblPuntos"
+        Me.LblPuntos.Size = New System.Drawing.Size(117, 37)
+        Me.LblPuntos.TabIndex = 7
+        Me.LblPuntos.Text = "Puntos"
         '
         'Button5
         '
@@ -161,21 +164,46 @@ Partial Class Form1
         '
         Me.Timer1.Interval = 1000
         '
+        'LblY
+        '
+        Me.LblY.AutoSize = True
+        Me.LblY.Font = New System.Drawing.Font("Berlin Sans FB", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblY.Location = New System.Drawing.Point(410, 129)
+        Me.LblY.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblY.Name = "LblY"
+        Me.LblY.Size = New System.Drawing.Size(106, 71)
+        Me.LblY.TabIndex = 10
+        Me.LblY.Text = "00"
+        '
+        'LblSigno
+        '
+        Me.LblSigno.AutoSize = True
+        Me.LblSigno.Font = New System.Drawing.Font("Arial Narrow", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblSigno.Location = New System.Drawing.Point(342, 129)
+        Me.LblSigno.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblSigno.Name = "LblSigno"
+        Me.LblSigno.Size = New System.Drawing.Size(63, 75)
+        Me.LblSigno.TabIndex = 11
+        Me.LblSigno.Text = "+"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 11.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(1156, 411)
+        Me.Controls.Add(Me.LblSigno)
+        Me.Controls.Add(Me.LblY)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.Puntos)
+        Me.Controls.Add(Me.LblPuntos)
         Me.Controls.Add(Me.LblTiempo)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.MaskedTextBox1)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.lblX)
         Me.Font = New System.Drawing.Font("Wingdings 2", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Name = "Form1"
@@ -184,16 +212,18 @@ Partial Class Form1
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents lblX As System.Windows.Forms.Label
     Friend WithEvents MaskedTextBox1 As System.Windows.Forms.MaskedTextBox
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Button4 As System.Windows.Forms.Button
     Friend WithEvents LblTiempo As System.Windows.Forms.Label
-    Friend WithEvents Puntos As System.Windows.Forms.Label
+    Friend WithEvents LblPuntos As System.Windows.Forms.Label
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
+    Friend WithEvents LblY As System.Windows.Forms.Label
+    Friend WithEvents LblSigno As System.Windows.Forms.Label
 
 End Class
