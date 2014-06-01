@@ -1,40 +1,40 @@
-﻿Public Class Form1
+﻿Public Class MathBatlle
 
     Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick
         Dim i, j As Integer
-        Select CmbSprint.SelectedIndex
+        Select Case CmbSprint.SelectedIndex
             Case 0
-                If LblTiempoAbs.Text = "30" Then
+                If LblTiempoAbs.Text = "300" Then
                     Timer1.Enabled = False
                     TextBoxRes.Enabled = False
                 End If
             Case 2
-                If LblTiempoAbs.Text = "60" Then
+                If LblTiempoAbs.Text = "600" Then
                     Timer1.Enabled = False
                     TextBoxRes.Enabled = False
                 End If
             Case 3
-                If LblTiempoAbs.Text = "120" Then
+                If LblTiempoAbs.Text = "1200" Then
                     Timer1.Enabled = False
                     TextBoxRes.Enabled = False
                 End If
             Case 4
-                If LblTiempoAbs.Text = "180" Then
+                If LblTiempoAbs.Text = "1800" Then
                     Timer1.Enabled = False
                     TextBoxRes.Enabled = False
                 End If
             Case 5
-                If LblTiempoAbs.Text = "240" Then
+                If LblTiempoAbs.Text = "2400" Then
                     Timer1.Enabled = False
                     TextBoxRes.Enabled = False
                 End If
             Case 6
-                If LblTiempoAbs.Text = "320" Then
+                If LblTiempoAbs.Text = "3200" Then
                     Timer1.Enabled = False
                     TextBoxRes.Enabled = False
                 End If
             Case Else
-                If LblTiempoAbs.Text = "30" Then
+                If LblTiempoAbs.Text = "300" Then
                     Timer1.Enabled = False
                     TextBoxRes.Enabled = False
                 End If
@@ -93,7 +93,7 @@
                 numerox = Random.Next(1, 5)
         End Select
 
-        
+
         lblX.Text = CStr(numero)
 
         LblY.Text = CStr(numerox)
@@ -122,8 +122,10 @@
     End Sub
 
     Private Sub TextBoxRes_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TextBoxRes.KeyDown
-        Dim resultado As Decimal
+        Dim resultado, maxi, SumDsp As Decimal
+
         Dim A As Char
+
         If e.KeyCode = Keys.Enter Then
 
             A = LblSigno.Text
@@ -138,7 +140,7 @@
                     resultado = CInt(lblX.Text) / CInt(LblY.Text)
                 Case Else
             End Select
-            If (TextBoxRes.Text <> "") Then
+            If (TextBoxRes.Text <> "" And IsNumeric(TextBoxRes.Text)) Then
 
                 If CInt(TextBoxRes.Text) = resultado Then
 
@@ -146,6 +148,24 @@
                     TextBoxRes.Focus()
                     LblPuntos.Text = CStr(resultado / CStr(LblTiempo.Text))
                     LblSumaPuntos.Text = LblSumaPuntos.Text + CDbl(LblPuntos.Text)
+                    Select Case LblSigno.Text
+                        Case "+"
+                            Lblsmart.Text = (Len(CStr(resultado)) * 1) * 10 / CInt(LblTiempo.Text)
+                        Case "-"
+                            Lblsmart.Text = (Len(CStr(resultado)) * 2) * 10 / CInt(LblTiempo.Text)
+                        Case "*"
+                            Lblsmart.Text = (Len(CStr(resultado)) * 4) * 10 / CInt(LblTiempo.Text)
+                        Case "/"
+                            Lblsmart.Text = (Len(CStr(resultado)) * 16) * 10 / CInt(LblTiempo.Text)
+                    End Select
+                    LbldsProm.Tag = LbldsProm.Tag + 1 'contador
+                    SumDsp = SumDsp + Lblsmart.Text
+                    LbldsProm.Text = SumDsp / LbldsProm.Tag
+                    LblDsMax.Tag = Lblsmart.Text
+                    If maxi < LblDsMax.Tag Then
+                        maxi = LblDsMax.Tag
+                        LblDsMax.Text = maxi
+                    End If
                     LblTiempo.Text = "1"
 
                     Call Button5_Click(sender, e)
@@ -155,5 +175,5 @@
         End If
     End Sub
 
-    
+
 End Class

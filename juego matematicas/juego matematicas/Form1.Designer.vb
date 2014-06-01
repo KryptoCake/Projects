@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form1
+Partial Class MathBatlle
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -23,7 +23,7 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MathBatlle))
         Me.lblX = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
@@ -43,6 +43,12 @@ Partial Class Form1
         Me.TextBoxRes = New System.Windows.Forms.TextBox()
         Me.CmbNivel = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.LblS = New System.Windows.Forms.Label()
+        Me.Lblsmart = New System.Windows.Forms.Label()
+        Me.LbldsProm = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.LblDsMax = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'lblX
@@ -150,7 +156,6 @@ Partial Class Form1
         '
         'Timer1
         '
-        Me.Timer1.Interval = 1000
         '
         'LblY
         '
@@ -271,12 +276,90 @@ Partial Class Form1
         Me.Label2.TabIndex = 19
         Me.Label2.Text = "____________"
         '
-        'Form1
+        'LblS
+        '
+        Me.LblS.AutoSize = True
+        Me.LblS.BackColor = System.Drawing.Color.Transparent
+        Me.LblS.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblS.Location = New System.Drawing.Point(713, 238)
+        Me.LblS.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblS.Name = "LblS"
+        Me.LblS.Size = New System.Drawing.Size(74, 37)
+        Me.LblS.TabIndex = 20
+        Me.LblS.Text = "Dsp"
+        '
+        'Lblsmart
+        '
+        Me.Lblsmart.AutoSize = True
+        Me.Lblsmart.BackColor = System.Drawing.Color.Transparent
+        Me.Lblsmart.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lblsmart.Location = New System.Drawing.Point(854, 238)
+        Me.Lblsmart.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Lblsmart.Name = "Lblsmart"
+        Me.Lblsmart.Size = New System.Drawing.Size(35, 37)
+        Me.Lblsmart.TabIndex = 21
+        Me.Lblsmart.Text = "0"
+        '
+        'LbldsProm
+        '
+        Me.LbldsProm.AutoSize = True
+        Me.LbldsProm.BackColor = System.Drawing.Color.Transparent
+        Me.LbldsProm.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LbldsProm.Location = New System.Drawing.Point(854, 282)
+        Me.LbldsProm.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LbldsProm.Name = "LbldsProm"
+        Me.LbldsProm.Size = New System.Drawing.Size(35, 37)
+        Me.LbldsProm.TabIndex = 23
+        Me.LbldsProm.Text = "0"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(713, 282)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(133, 37)
+        Me.Label5.TabIndex = 22
+        Me.Label5.Text = "DsProm"
+        '
+        'LblDsMax
+        '
+        Me.LblDsMax.AutoSize = True
+        Me.LblDsMax.BackColor = System.Drawing.Color.Transparent
+        Me.LblDsMax.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblDsMax.Location = New System.Drawing.Point(854, 327)
+        Me.LblDsMax.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblDsMax.Name = "LblDsMax"
+        Me.LblDsMax.Size = New System.Drawing.Size(35, 37)
+        Me.LblDsMax.TabIndex = 25
+        Me.LblDsMax.Text = "0"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(713, 327)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(115, 37)
+        Me.Label6.TabIndex = 24
+        Me.Label6.Text = "DsMax"
+        '
+        'MathBatlle
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 11.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(1156, 411)
+        Me.ClientSize = New System.Drawing.Size(939, 411)
+        Me.Controls.Add(Me.LblDsMax)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.LbldsProm)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Lblsmart)
+        Me.Controls.Add(Me.LblS)
         Me.Controls.Add(Me.LblY)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.CmbNivel)
@@ -297,7 +380,7 @@ Partial Class Form1
         Me.Controls.Add(Me.lblX)
         Me.Font = New System.Drawing.Font("Wingdings 2", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.Name = "Form1"
+        Me.Name = "MathBatlle"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -322,5 +405,11 @@ Partial Class Form1
     Friend WithEvents TextBoxRes As System.Windows.Forms.TextBox
     Friend WithEvents CmbNivel As System.Windows.Forms.ComboBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents LblS As System.Windows.Forms.Label
+    Friend WithEvents Lblsmart As System.Windows.Forms.Label
+    Friend WithEvents LbldsProm As System.Windows.Forms.Label
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents LblDsMax As System.Windows.Forms.Label
+    Friend WithEvents Label6 As System.Windows.Forms.Label
 
 End Class
