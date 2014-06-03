@@ -161,11 +161,12 @@
                     LbldsProm.Tag = LbldsProm.Tag + 1 'contador
                     SumDsp = SumDsp + Lblsmart.Text
                     LbldsProm.Text = SumDsp / LbldsProm.Tag
-                    LblDsMax.Tag = Lblsmart.Text
-                    If maxi < LblDsMax.Tag Then
-                        maxi = LblDsMax.Tag
-                        LblDsMax.Text = maxi
+                    'maxi = Lblsmart.Text
+                    If CDec(Lblsmart.Text) > LblDsMax.Tag Then
+                        LblDsMax.Tag = CDec(Lblsmart.Text)
+
                     End If
+                    LblDsMax.Text = LblDsMax.Tag
                     LblTiempo.Text = "1"
 
                     Call Button5_Click(sender, e)
